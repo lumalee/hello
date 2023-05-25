@@ -13,7 +13,6 @@
 </head>
 <body>
   <script>
-    console.log('hi')
     function random(number) {
       return Math.floor(Math.random() * (number + 1));
     }
@@ -21,6 +20,12 @@
       const randomColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
       document.body.style.backgroundColor = randomColor;
     });
+    function createGreeting(greeting) {
+      const greet = document.createElement('h1');
+      greet.textContent = greeting;
+      document.body.appendChild(greet);
+    }
+    createGreeting('hello');
   </script>
 </body>
 </html>
